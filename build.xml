@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="IndelibleWebAccess-Linux" default="buildDist" basedir=".">
+	<import file="../IndelibleWebAccess/version.xml"/>
+	<import file="../iGeekCommon-Linux/build-common-linux.xml"/>
+	<target name="localProperties">
+		<property name="jarName" value="IndelibleWebAccess-Linux.jar"/>
+		<property name="debianBuild" value="${output}/Debian"/>
+		<property name="rpmSpecFile" value="indelible-webaccess.spec"/>
+		<property name="debianPackageName" value="indelible-webaccess"/>
+	</target>
+
+	<target name="setupOtherProjects">
+		<addOtherProject otherProjectName="iGeekCommon" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="iGeekCommon-Linux" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="IndelibleFSClient" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="IndelibleFSClient-Linux" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="IndelibleServerCore" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="IndelibleServerCore-Linux" classPathRefID="localLibs"/>
+		<addOtherProject otherProjectName="IndelibleWebAccess" classPathRefID="localLibs"/>
+	</target>
+	<target name="init" depends="iGeekBuildCommonLinux.init">
+		<mkdir dir="${debianBuild}"/>
+	</target>
+</project>

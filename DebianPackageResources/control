@@ -1,0 +1,12 @@
+Source: indelible-webaccess
+Maintainer: iGeek, Inc. <info@igeekinc.com>
+Section: utils
+Priority: optional
+Standards-Version: 3.8.4
+Build-Depends: openjdk-6-jdk, ant (>=1.7), debhelper (>=7), libavahi-client-dev
+
+Package: indelible-webaccess
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql (>=8.4), avahi-daemon, libavahi-client3, openjdk-6-jre
+Description: Indelible Web Access
+ Provides User Web interface and REST interface
