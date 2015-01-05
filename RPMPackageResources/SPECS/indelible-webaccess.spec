@@ -1,6 +1,6 @@
 Name:	indelible-webaccess	
 Version:	@REVISION@
-Release:	1%{?dist}
+Release:	@BUILD@
 Summary:	Indelible Web Access
 Group:		System Environment/Daemons
 License:	Apache
